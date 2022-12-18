@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background-image: url(../img/main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $black;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.bg80 {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../img/main-bg.png);
+        background-color: $black;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: -1;
+    }
+}
+
+.bg40 {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../img/main-bg.png);
+        background-color: $black;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        z-index: -1;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1231px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 90px;
+    background-color: $red;
+    color: $white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $white;
+        border-radius: 50%;
+        opacity: 0;
+
+        transition: all .15s ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transform: rotate(-6deg);
+    }
+}
+
+.btn-small {
+    display: flex;
+
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 135px;
+    height: 40px;
+
+    background-color: transparent;
+    border: 1px solid $red;
+    color: $red;
+    margin-right: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background-color: $red;
+        top: 19px;
+        right: -15px;
+
+        transition: all .15s ease;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid $red;
+        border-right: 1px solid $red;
+        transform: rotate(45deg);
+        top: 16px;
+        right: -15px;
+
+        transition: all .15s ease;
+    }
+
+
+    &:hover:before,
+    &:hover::after {
+        right: -24px;
+    }
+
+}
+
+
+.btn-back {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $red;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover::after, &:hover::before {
+        left: -16px;
+    }
+
+
+    &::before {
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 1px;
+        background-color: $red;
+        top: 50%;
+        left: -10px;
+        transition: all .1s ease;
+    }
+
+    &::after {
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-left: 1px solid $red;
+        border-bottom: 1px solid $red;
+        transform: rotate(45deg);
+        top: 10px;
+        left: -10px;
+        transition: all .1s ease;
+    }
+}
+
+.slick-slider {
+    transform: translateX(10px);
+}
+
+@import "slickArrows";

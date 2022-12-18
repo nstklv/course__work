@@ -1,0 +1,128 @@
+.banner {
+    background-color: $red;
+
+    .container {
+        position: relative;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        min-height: 505px;
+        max-width: 720px;
+        padding: 100px 0;
+
+        justify-content: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 60px;
+            right: 0;
+
+            max-width: 420px;
+            max-height: 400px;
+            width: 100%;
+            height: 100%;
+            
+            background: url(../img/banner.svg) center no-repeat;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        font-family: 'STIX Two Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 135%;
+
+        color: $white;
+    }
+
+    &__subtitle {
+        margin-bottom: 28px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+
+        color: $white;
+    }
+
+    &__btn {
+        color: $white;
+        background-color: $black;
+    }
+}
+
+@media(max-width: 1200px) {
+    .banner {
+        &__inner {
+
+            &::after {
+                max-width: 300px;
+                max-height: 280px;
+
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .banner__title {
+        font-size: 32px;
+        max-width: 485px;
+    }
+
+    .banner__subtitle {
+        max-width: 480px;
+    }
+
+    .banner {
+        &__inner {
+
+            &::after {
+                max-width: 250px;
+                max-height: 232px;
+
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .banner__title {
+        font-size: 28px;
+    }
+
+    .banner__subtitle {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 766px) {
+    .banner {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            &::after {
+                display: none;
+
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+
+}
+
+@media(max-width: 360px) {}

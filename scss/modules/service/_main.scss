@@ -1,0 +1,130 @@
+.main {
+    margin-bottom: 160px;
+    &__inner {
+        padding-top: 54px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__page-manager {
+        margin-bottom: 35px;
+    }
+
+    &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        padding: 40px;
+
+        background-color: $transp5;
+        border-radius: 8px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 47px;
+            right: 70px;
+            width: 251px;
+            height: 266px;
+
+            background-image: url(https://place-hold.it/500x500);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+    }
+
+    &__flags-list {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 8px;
+
+        &-item {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 160%;
+            color: $white;
+            opacity: 0.8;
+        }
+    }
+
+    &__title {
+        font-family: 'STIX Two Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 135%;
+        color: $white;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: $grayLight;
+        margin-bottom: 18px;
+        max-width: 764px;
+    }
+}
+
+@media(max-width: 1200px)
+{
+    .main__info {
+
+        &::after {
+            width: 216px;
+            height: 228px;
+        }
+    }
+
+    .main__text {
+        max-width: 603px;
+    }
+}
+
+@media(max-width: 1000px)
+{
+    .main__info {
+
+        &::after {
+            width: 168px;
+            height: 178px;
+        }
+    }
+
+    .main__text {
+        max-width: 449px;
+    }
+}
+
+@media(max-width: 768px)
+{
+    .main__info {
+        align-items: center;
+        &::after {
+            display: none;
+        }
+    }
+
+    .main__text {
+        max-width:none;
+        text-align: center;
+    }
+
+    .main__title {
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px)
+{
+
+    
+}

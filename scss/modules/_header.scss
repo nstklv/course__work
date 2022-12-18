@@ -1,0 +1,244 @@
+@import "../vars";
+
+.header {
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: $black;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 100;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 30px;
+        width: 130px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 20px;
+
+        &-tel {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: $white;
+        }
+
+        &-link {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: $red;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 30px;
+
+        &-link {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: $white;
+
+            &:nth-child(3) {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+    .header__inner {
+        padding: 12px 0;
+    }
+
+    .header__menu {
+        background-color: $black;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        transform: translateY(-200%);
+        transition: all .15s ease;
+
+        &::before {
+            content: "";
+            width: 160px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: $gray;
+        }
+
+        &.active {
+            transform: translateY(0);
+        }
+    }
+
+    .header__nav {
+        position: relative;
+        top: 70px;
+        left: 180px;
+        flex-direction: column;
+        gap: 20px;
+
+        &-link {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 160%;
+            color: $white;
+        }
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+
+        background-color: $transp5;
+        border-radius: 6px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background-color: $white;
+            top: 14px;
+            right: 12px;
+            transition: all .15s ease;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background-color: $white;
+            bottom: 14px;
+            right: 12px;
+            transition: all .15s ease;
+        }
+
+        span {
+            position: absolute;
+            right: 12px;
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: $white;
+            top: calc(50% - 1px);
+
+            transition: all .15s ease;
+        }
+
+        &.active {
+            span {
+                opacity: 0;
+            }
+        }
+
+        &.active::before {
+            top: 22px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+
+        &.active::after {
+            bottom: 22px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .header__menu::before {
+        width: 163px;
+    }
+
+    .header__nav {
+        left: 180px;
+        top: 60px;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .header__menu::before {
+        width: 108px;
+    }
+
+    .header__nav {
+        left: 140px;
+        top: 40px;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+}
+
+@media(max-width: 360px) {
+    .header__menu::before {
+        width: 40px;
+    }
+
+    .header__nav {
+        left: 60px;
+        top: 20px;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+}

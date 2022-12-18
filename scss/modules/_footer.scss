@@ -1,0 +1,214 @@
+.footer {
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    &__logo {
+        img {
+            width: 209px;
+            height: 47px;
+        }
+    }
+
+    &__upper-info {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 50px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, #5C5C5C 0%, rgba(92, 92, 92, 0.5) 55.16%, rgba(92, 92, 92, 0) 100.87%);
+            opacity: 0.8;
+        }
+    }
+
+    &__description {
+        max-width: 515px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+
+        color: $grayLight;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        max-width: 290px;
+        gap: 10px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+
+        color: $white;
+    }
+
+    &__address {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+    }
+
+    &__licenses {
+        display: flex;
+        gap: 15px;
+
+        &-item span {
+            color: $grayLight;
+        }
+    }
+
+
+    &__lower {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        padding-top: 50px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-link {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                color: $white;
+
+                &:nth-child(3) {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-article {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 160%;
+            color: $gray;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+
+        &-copy {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 165%;
+            color: $gray;
+        }
+
+        &-offer {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 165%;
+            color: $white;
+        }
+
+        &-terms {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 165%;
+            color: $white;
+        }
+    }
+}
+
+@media(max-width: 1000px)
+{
+    .footer__contacts {
+        flex-direction: row;
+        gap: 20px;
+        max-width: 400px;
+    }
+    .footer__licenses {
+        flex-direction: column;
+        gap: 0;
+    }
+    .footer__upper-info {
+        flex-direction: column;
+    }
+
+    .footer__social-item:last-child {
+        display: none;
+    }
+}
+
+@media(max-width: 768px)
+{
+    .footer__description {
+        max-width: none;
+    }
+    .footer__upper {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .footer__social {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+@media(max-width: 480px)
+{
+    .footer__contacts {
+        flex-direction: column;
+    }
+}
