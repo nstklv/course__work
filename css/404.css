@@ -18,7 +18,7 @@
 }
 
 .bg {
-  background-image: url(../img/main-bg.png);
+  background-image: url(../img/main-bg.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1B1B1B;
@@ -35,7 +35,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/main-bg.png);
+  background-image: url(../img/main-bg.webp);
   background-color: #1B1B1B;
   background-size: cover;
   background-position: center;
@@ -55,7 +55,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/main-bg.png);
+  background-image: url(../img/main-bg.webp);
   background-color: #1B1B1B;
   background-size: cover;
   background-position: center;
@@ -253,6 +253,10 @@ a {
   border-top: 1px solid #DA4533;
   border-right: 1px solid #DA4533;
   transform: rotate(45deg);
+}
+
+.slick-arrow.slick-hidden {
+  display: block !important;
 }
 
 .header::after {
