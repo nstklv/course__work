@@ -195,6 +195,12 @@ a {
   transform: translateX(10px);
 }
 
+@media (max-width: 480px) {
+  .btn,
+.btn-small {
+    font-size: 14px;
+  }
+}
 .arrow-next, .arrow-prev {
   cursor: pointer;
   position: absolute;
@@ -546,6 +552,7 @@ a {
   line-height: 160%;
   color: #ffffff;
   opacity: 0.8;
+  text-transform: uppercase;
 }
 .main__title {
   font-family: "STIX Two Text";

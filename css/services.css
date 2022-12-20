@@ -195,6 +195,12 @@ a {
   transform: translateX(10px);
 }
 
+@media (max-width: 480px) {
+  .btn,
+.btn-small {
+    font-size: 14px;
+  }
+}
 .arrow-next, .arrow-prev {
   cursor: pointer;
   position: absolute;
@@ -608,6 +614,10 @@ a {
   background-color: rgba(255, 255, 255, 0.05);
   border: none;
   height: 100%;
+}
+.main__categories-pagination-item.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 .main__categories-pagination-item:hover {
   background-color: rgba(255, 255, 255, 0.15);

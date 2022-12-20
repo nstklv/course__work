@@ -218,4 +218,13 @@ a {
     transform: translateX(10px);
 }
 
+@media(max-width: 480px)
+{
+    .btn,
+    .btn-small {
+        font-size: 14px;
+    }
+
+}
+
 @import "slickArrows";

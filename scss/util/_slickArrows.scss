@@ -14,7 +14,7 @@
     &-prev {
         left: calc(50% - 50px);
 
-        &::before {
+        &::before {//прямая
             content: "";
             display: block;
             position: absolute;
@@ -25,7 +25,7 @@
             background-color: $red;
         }
 
-        &::after {
+        &::after {//стрелка
             content: "";
             display: block;
             position: absolute;

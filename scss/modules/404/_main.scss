@@ -1,5 +1,9 @@
 .main {
 
+    &-bg {
+        flex: 1;
+    }
+
     &__inner {
         padding-top: 145px;
         display: flex;
@@ -36,8 +40,9 @@
         margin-bottom: 140px;
     }
 
-
 }
+
+
 
 @media(max-width: 1200px)
 {

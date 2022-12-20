@@ -173,6 +173,12 @@
                 border: none;
                 height: 100%;
 
+                &.active {
+                    background-color: $transp15;
+                    color: $white;
+                }
+
+
                 &:hover {
                     background-color: $transp15;
                     color: $white;
